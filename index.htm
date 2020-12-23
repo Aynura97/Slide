@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="num" />
+    <button onclick="Move()">ok</button>
+    <script>
+        onload = function () {
+            Move();
+        }
+        setInterval(Move, 2000);
+
+        function Move() {
+            let n = 1129001;
+
+            let gun = Math.floor(n / 86400);
+            n %= 86400;
+
+            let saat = Math.floor(n / 3600);
+            n %= 3600;
+
+            let dq = Math.floor(n / 60);
+            n %= 60;
+
+
+            console.log(`${gun} gun ${saat} saat ${dq} dq ${n} sn`);
+           
+            }
+
+       
+    </script>
+</body>
+
+</html>
